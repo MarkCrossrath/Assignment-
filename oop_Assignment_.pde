@@ -1,12 +1,13 @@
 Radar myRadar;
 button1 redbutton;
+button2 Button2;
 void setup()
 {
   size(800, 800);
   background(3,7,33);
   myRadar= new Radar();
   redbutton= new button1();
-  
+  Button2 = new button2();
   
  
 }
@@ -51,5 +52,6 @@ void draw()
   drawGrid();
   myRadar.draw();
   redbutton.draw();
+  Button2.draw();
 
 }
