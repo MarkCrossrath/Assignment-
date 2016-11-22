@@ -1,6 +1,12 @@
+// class calls
+
+
 Radar myRadar;
 button1 redbutton;
 button2 Button2;
+DigitalClock digitalClock;
+
+
 void setup()
 {
   size(800, 800);
@@ -8,9 +14,11 @@ void setup()
   myRadar= new Radar();
   redbutton= new button1();
   Button2 = new button2();
+  digitalClock = new DigitalClock(15, 100, 600); 
+}
   
  
-}
+
 float border = 50;
 
 void drawGrid()
@@ -53,5 +61,7 @@ void draw()
   myRadar.draw();
   redbutton.draw();
   Button2.draw();
+   digitalClock.getTime();
+  digitalClock.display();
 
 }
