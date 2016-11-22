@@ -9,12 +9,12 @@ DigitalClock digitalClock;
 
 void setup()
 {
-  size(800, 800);
+  size(800, 700);
   background(3,7,33);
   myRadar= new Radar();
   redbutton= new button1();
   Button2 = new button2();
-  digitalClock = new DigitalClock(15, 100, 600); 
+  digitalClock = new DigitalClock(15, 200, 600); 
 }
   
  
@@ -63,5 +63,9 @@ void draw()
   Button2.draw();
    digitalClock.getTime();
   digitalClock.display();
+  stroke(11, 150, 240);
+  noFill();
+  rect(0,599,200,50);
+  rect(0,649,200,50);
 
 }

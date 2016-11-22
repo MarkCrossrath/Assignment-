@@ -11,7 +11,7 @@ void draw()
 
    x = Radarx + sin(thetha) * radius;
    y = Radary + cos(thetha) * radius;
-  fill(#1AFC0F);//(3,7,3);
+  fill(3,7,33);
   stroke(11, 150, 240);
     
   ellipse(Radarx, Radary, radius*2, radius*2);
