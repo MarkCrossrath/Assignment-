@@ -1,22 +1,56 @@
 class button1
 {
-  float buttonx= 700;
-  float buttony = 650;
-  color currentColor =color(255,0,0);
-  color newColor = color(243,85,85);
+  float buttonx=670;
+  float buttony= 610;
+  color currentColor =color(206,69,10);
+  color newColor = color(255);
+  color overColor = color(243,85,85);
+  boolean overButton =false;
+  boolean locked = false;
+  
+  void setup()
+  {
+    
+    
+    
+  }
+  
   
   void draw()
   {
     
     fill(currentColor);
-    stroke (255);
-    ellipse(buttonx,buttony, 70,40);
-    if(mousePressed==true)
-    {
+   noStroke();
+    ellipse(buttonx,buttony, 100,50);
+    
+   
+   if (mouseX> buttonx+50 &&
+   mouseX < buttony+50 && mouseY> buttony-25 && mouseY< buttony + 25)
+   {
+     overButton = true;
+     if(!locked)
+     {
+       stroke(255);
+       fill(206,69,10);
+     //  ellipse(buttonx,buttony, 100,50);
+     }
+   }
+   else
+   {
+     fill(206,69,10);
      
-      
-    }
+     overButton = false;
+     ellipse(buttonx,buttony, 100,50);
+   }
+     
+   }
+         
+       
   
 
   }
-}
+  
+  void update()
+  {
+    
+  }
