@@ -61,7 +61,7 @@ void mousePressed()
 {
    for(float x = 0 ; x <10; x ++)
     {
-      for (int y =0; y<11;y++)
+      for (int y =0; y<10;y++)
       {
           
       float lx = map(x, 0, 10, border, 500 - border);
@@ -102,8 +102,9 @@ void draw()
   
   if(drawSquare == true)
   {
-    fill(0, 255, 0);
-    rect(squareLx, squareLy, 40, 40);
+    noStroke();
+    fill(24, 150, 240);
+    rect(squareLx, squareLy, 43, 43);
   }
     
   
