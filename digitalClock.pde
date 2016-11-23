@@ -19,7 +19,7 @@ class DigitalClock extends Clock {
     
    
     textSize(fontSize);
-    textAlign(CENTER,BOTTOM);
+    textAlign(CENTER,CENTER);
     text (h + ":" + nf(m, 2) + ":" + nf(s, 2), x, y);
   } 
 }
