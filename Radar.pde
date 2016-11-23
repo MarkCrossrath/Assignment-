@@ -12,7 +12,7 @@ void draw()
    x = Radarx + sin(thetha) * radius;
    y = Radary + cos(thetha) * radius;
 
-  if(frameCount % 100!=0)
+  if(frameCount % 150!=0)
   {
   fill(3,7,33);
   stroke(11, 150, 240);
