@@ -2,12 +2,17 @@
 
 int blue = color(24, 150, 240);
 int green = color(0, 255, 0);
+int red = color(255,0,0);
 int squareColor = blue;
 
+
+
 Radar myRadar;
-button1 redbutton;
-button1 greenbutton;
+greenButton greenbutton;
+redButton redbutton;
 DigitalClock digitalClock;
+
+
 
 float squareLx;
 float squareLy;
@@ -19,9 +24,10 @@ void setup()
   size(800, 800);
   background(3,7,33);
   myRadar= new Radar();
-  redbutton= new button1();
-  greenbutton = new button1();
   digitalClock = new DigitalClock(15, 100, 622); 
+  greenbutton = new greenButton();
+  redbutton = new redButton();
+  
   
 }
   
@@ -95,22 +101,25 @@ void draw()
   drawGrid();
   
   myRadar.draw();
-  redbutton.draw();
-  greenbutton.draw();
+ 
+  
+  
    digitalClock.getTime();
   digitalClock.display();
   stroke(24, 150, 240);
   noFill();
   rect(0,599,200,50);
   rect(0,649,200,50);
-  
+ 
   if(drawSquare == true)
   {
     noStroke();
     fill(squareColor);
     rect(squareLx, squareLy, 43, 43);
   }
-    
+    greenbutton.draw();
+    redbutton.draw();
+  
   
 
 }
