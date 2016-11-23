@@ -117,6 +117,7 @@ void draw()
   stroke(24, 150, 240);
   noFill();
   rect(0,599,200,50);
+  rect(0,650, 200,50);
   
  
   if(drawSquare == true)
@@ -136,15 +137,15 @@ void draw()
      float mposy = mouseY;
      fill(11,150,240);
       text( "COORDINATES",570,330);
-    if (mposx< xright && mposx > xleft && mposy > ytop && mposy < ybottom)
+    if (mposx< xright && mposx > xleft && mposy > ytop && mposy < ybottom);
     {
   
-  text(mouseX +"," + mouseY,670,330);
+      text(mouseX +"," + mouseY,670,330);
     }
-   else
+   //else
     
-    {
-      text("000,000",670,330);
-    }
+   // {
+    //  text("000,000",670,330);
+  //  }
 
 }
