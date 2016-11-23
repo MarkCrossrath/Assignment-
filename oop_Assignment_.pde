@@ -1,14 +1,18 @@
 // class calls
 
+int blue = color(24, 150, 240);
+int green = color(0, 255, 0);
+int squareColor = blue;
 
 Radar myRadar;
 button1 redbutton;
-button2 Button2;
+button1 greenbutton;
 DigitalClock digitalClock;
 
 float squareLx;
 float squareLy;
 boolean drawSquare = false;
+
 
 void setup()
 {
@@ -16,7 +20,7 @@ void setup()
   background(3,7,33);
   myRadar= new Radar();
   redbutton= new button1();
-  Button2 = new button2();
+  greenbutton = new button1();
   digitalClock = new DigitalClock(15, 100, 622); 
   
 }
@@ -82,7 +86,7 @@ void mousePressed()
 
 void mouseReleased()
 {
-  drawSquare = false;
+  drawSquare = true;
 }
 
 void draw()
@@ -92,7 +96,7 @@ void draw()
   
   myRadar.draw();
   redbutton.draw();
-  Button2.draw();
+  greenbutton.draw();
    digitalClock.getTime();
   digitalClock.display();
   stroke(24, 150, 240);
@@ -103,7 +107,7 @@ void draw()
   if(drawSquare == true)
   {
     noStroke();
-    fill(24, 150, 240);
+    fill(squareColor);
     rect(squareLx, squareLy, 43, 43);
   }
     

@@ -2,68 +2,39 @@ class button1
 
 {
   
-  int circleX= 700;
-  int circleY = 610;  // Position of circle button
-   
-int circleSize = 50;   // Diameter of circle
-
-
-
-boolean circleOver = false;
-
-
-  
- color currentColor;
- color circleColor = color(16,124,70);
- color circleHighlight = color(134,225,179);
- color baseColor = color(102);
- color pressedColor = color(134,225,179);
-  
-  
- 
- 
+  int circX= 700;
+  int circY = 610;  // Position of circle button
+  int r1= 50;
+  int r2 = 50;
 
 
 void draw() {
-  update(mouseX, mouseY);
+  
   
   
  
+  update();
+}
+
+void update() {
+  noStroke();
+  rect(circX, circY, r1,r2);
+  fill(green);
   
-  if (circleOver) {
-    fill(circleHighlight);
-  } else {
-    fill(circleColor);
-  }
-  stroke(0);
-  ellipse(circleX, circleY, circleSize, circleSize);
-}
-
-void update(int x, int y) {
-  if ( overCircle(circleX, circleY, circleSize) ) {
-    circleOver = true;
-    } else {
-    circleOver = false;
-  }
-}
-
-void mousePressed() {
-  if (circleOver== true) {
-    currentColor = pressedColor;
+  
+ if(mousePressed){
+  if(mouseX>circX && mouseX <circX+r1 && mouseY>circY && mouseY <circY+r1){
     
-  }
+    fill(255);
+      }
+    }
+}
   
-}
+  
 
 
 
-boolean overCircle(int x, int y, int diameter) {
-  float disX = x - mouseX;
-  float disY = y - mouseY;
-  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
-    return true;
-  } else {
-    return false;
-  }
-}
+
+
+
 }
