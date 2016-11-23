@@ -17,8 +17,7 @@ DigitalClock digitalClock;
 float squareLx;
 float squareLy;
 boolean drawSquare = false;
-
-
+PImage img;
 void setup()
 {
   size(800, 800);
@@ -27,9 +26,11 @@ void setup()
   digitalClock = new DigitalClock(15, 100, 622); 
   greenbutton = new greenButton();
   redbutton = new redButton();
-  
-  
+  img = loadImage("oopimage.jpg");
 }
+  
+  
+
   
  
 
@@ -98,8 +99,8 @@ void mouseReleased()
 void draw()
 {
   background(3,7,33);
+  image(img,0,0);
   drawGrid();
-  
   myRadar.draw();
  
   
