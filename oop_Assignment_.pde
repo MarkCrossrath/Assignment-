@@ -111,7 +111,7 @@ void draw()
   stroke(24, 150, 240);
   noFill();
   rect(0,599,200,50);
-  rect(0,649,200,50);
+  
  
   if(drawSquare == true)
   {
@@ -121,7 +121,7 @@ void draw()
   }
     greenbutton.draw();
     redbutton.draw();
-  
-  
+  text( "COORDINATES",570,330);
+  text(mouseX +"," + mouseY,670,330);
 
 }
