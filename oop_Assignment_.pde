@@ -1,9 +1,9 @@
 // class calls
 
-int blue = color(24, 150, 240);
-int green = color(0, 255, 0);
-int red = color(255,0,0);
-int squareColor = blue;
+int grey = color(116, 110, 110,200);
+int green = color(0, 255, 0,100);
+int red = color(255,0,0,100);
+int squareColor = grey;
 
 
 
@@ -32,7 +32,7 @@ void setup()
   
 
   
-//int imgBorder= 40; 
+ 
 
 float border = 40;
 
@@ -100,11 +100,15 @@ void draw()
 {
   background(3,7,33);
   image(img,40,40,420,420);
-  
+ /*float xright  = 460;
+ float xleft = 40;
+ float ytop = 43;
+ float ybottom = 463;*/
   drawGrid();
   myRadar.draw();
  
-  
+  /*float mposx = mouseX;
+  float mposy = mouseY;*/
   
    digitalClock.getTime();
   digitalClock.display();
@@ -121,7 +125,23 @@ void draw()
   }
     greenbutton.draw();
     redbutton.draw();
-  text( "COORDINATES",570,330);
+     float xright  = 460;
+     float xleft = 40;
+     float ytop = 43;
+     float ybottom = 463;
+     float mposx = mouseX;
+     float mposy = mouseY;
+     fill(11,150,240);
+      text( "COORDINATES",570,330);
+    if (mposx< xright && mposx > xleft && mposy > ytop && mposy < ybottom)
+    {
+  
   text(mouseX +"," + mouseY,670,330);
+    }
+   else
+    
+    {
+      text("000,000",670,330);
+    }
 
 }
