@@ -18,7 +18,7 @@ void draw() {
 
 void update() {
   noStroke();
-  fill(0,255,0);
+  fill(116,110,110);
   rect(circX, circY, r1,r2);
   
   

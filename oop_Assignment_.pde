@@ -11,6 +11,7 @@ Radar myRadar;
 greenButton greenbutton;
 redButton redbutton;
 DigitalClock digitalClock;
+greyButton greybutton;
 
 
 
@@ -25,6 +26,7 @@ void setup()
   myRadar= new Radar();
   digitalClock = new DigitalClock(15, 100, 622); 
   greenbutton = new greenButton();
+  greybutton = new greyButton();
   redbutton = new redButton();
   img = loadImage("oopimage.jpg");
 }
@@ -125,6 +127,7 @@ void draw()
   }
     greenbutton.draw();
     redbutton.draw();
+    greybutton.draw();
      float xright  = 460;
      float xleft = 40;
      float ytop = 43;
