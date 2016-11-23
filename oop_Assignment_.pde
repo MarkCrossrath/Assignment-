@@ -32,7 +32,7 @@ void setup()
   
 
   
- 
+//int imgBorder= 40; 
 
 float border = 40;
 
@@ -99,7 +99,8 @@ void mouseReleased()
 void draw()
 {
   background(3,7,33);
-  image(img,0,0);
+  image(img,40,40,420,420);
+  
   drawGrid();
   myRadar.draw();
  
