@@ -12,7 +12,7 @@ greenButton greenbutton;
 redButton redbutton;
 DigitalClock digitalClock;
 greyButton greybutton;
-
+Date date;
 
 
 float squareLx;
@@ -29,6 +29,7 @@ void setup()
   greybutton = new greyButton();
   redbutton = new redButton();
   img = loadImage("oopimage.jpg");
+  date =new Date();
 }
   
   
@@ -126,9 +127,11 @@ void draw()
     fill(squareColor);
     rect(squareLx, squareLy, 43, 43);
   }
+  stroke(11,150,240);
     greenbutton.draw();
     redbutton.draw();
     greybutton.draw();
+    date.draw();
      float xright  = 460;
      float xleft = 40;
      float ytop = 43;
@@ -136,16 +139,16 @@ void draw()
      float mposx = mouseX;
      float mposy = mouseY;
      fill(11,150,240);
-      text( "COORDINATES",570,330);
-    if (mposx< xright && mposx > xleft && mposy > ytop && mposy < ybottom);
+      text( "COORDINATES",620,250);
+    if (mposx< xright && mposx > xleft && mposy > ytop && mposy < ybottom)
     {
   
-      text(mouseX +"," + mouseY,670,330);
+      text(mouseX +"," + mouseY,720,250);
     }
-   //else
+   else
     
-   // {
-    //  text("000,000",670,330);
-  //  }
+   {
+      text("000,000",720,250);
+   }
 
 }

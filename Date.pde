@@ -7,16 +7,16 @@ class Date
  
   void draw()
   {
-    stroke(24, 150, 240);
+    fill(11,150,240);
     String s = String.valueOf(d);
-    stroke(24, 150, 240);
-    text(s, 10, 28);
-    text ("/",25,28);
+   
+    text(s, 68, 670);
+    text ("/",80,670);
     s = String.valueOf(m);
-    text(s, 30, 28); 
-    text("/",45,28);
+    text(s, 95, 670); 
+    text("/",108,670);
     s = String.valueOf(y);
-    text(s, 50, 28);
+    text(s, 130, 670);
   }
     
 }
